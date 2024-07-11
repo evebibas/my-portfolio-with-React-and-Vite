@@ -1,0 +1,136 @@
+@import "../../vars.css";
+
+.container {
+    margin-top: 49px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #000000;
+    border-radius: 25px;
+    padding-bottom: 60px;
+
+}
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    padding: 55px 20px 4px 87px;
+  }
+
+.content {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding : 20px 30px; 
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+}
+
+.li {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 40px 60px ; 
+    grid-template-areas: 
+    "im ti"
+    "im tx" 
+    ;
+    border-radius: 20px; 
+    background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.li:hover {
+    background-size: 100% 100%;
+}
+
+.li img {
+    width: 50%;
+    padding: 15px;
+    grid-area: im;
+    margin: auto;
+    position: relative; /* Position relative pour le centrage */
+    top: 50%; /* Déplace l'image de 50% de sa hauteur */
+    transform: translateY(-50%); /* Corrige le centrage vertical */
+}
+
+.li h3 {
+    color: white; /* Exemple de couleur (gris foncé) */
+    font-size: 27px; 
+    letter-spacing: 0.05em;
+    text-align: left;
+    width: 100%;
+    grid-area: ti;   
+    padding-bottom: 3%;
+}
+
+.li p{
+    max-width: 90%;
+    font-size: 24px;
+    line-height: 31.5px;
+    letter-spacing: 0.05em;
+    color: white;
+    grid-area: tx;
+    min-width: 80%;
+}
+
+@media (min-width: 744px) and (max-width: 1192px) {
+    .content {
+        display: block; /* Passer en affichage bloc */
+        padding: 0; /* Supprimer le padding */
+        grid-gap: 0; /* Supprimer l'espacement entre les cellules */
+        grid-template-columns: initial; /* Réinitialiser la propriété grid-template-columns */
+        align-items: initial; /* Réinitialiser la propriété align-items */
+
+      }
+    .li {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 40px 60px ; 
+        grid-template-areas: 
+        "im ti"
+        "im tx" 
+        ;
+
+    }
+    
+    .aboutImage {
+        display: none;
+      }
+  } 
+
+  @media (max-width: 900px) {
+    .content {
+        display: block; /* Passer en affichage bloc */
+        padding: 0; /* Supprimer le padding */
+        grid-gap: 0; /* Supprimer l'espacement entre les cellules */
+        grid-template-columns: initial; /* Réinitialiser la propriété grid-template-columns */
+        align-items: initial; /* Réinitialiser la propriété align-items */
+      }
+
+    .aboutImage {
+        display: none;
+      }
+
+      .li img {
+        display: none;
+      }
+      .li {
+        display: block;
+
+      }
+  }

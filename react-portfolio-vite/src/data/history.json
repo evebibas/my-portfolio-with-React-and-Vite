@@ -1,0 +1,18 @@
+[
+    {
+      "role": "Salesforce Developer",
+      "organisation": "Balink",
+      "startDate": "Dec, 2021",
+      "endDate": "Present",
+      "experiences": ["Advanced Salesforce implementation", "Proven Salesforce development skills"],
+      "imageSrc": "history/balink.png"
+    },
+    {
+      "role": "Full Stack Engineer",
+      "organisation": "Ellis-Car",
+      "startDate": "Aug, 2020",
+      "endDate": "Dec, 2021",
+      "experiences": ["Worked on React", "Innovated development and collaboration."],
+      "imageSrc": "history/elliscar.png"
+    }
+  ]
